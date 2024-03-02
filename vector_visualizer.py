@@ -126,4 +126,4 @@ class VectorVisualizer:
 
     # The run method runs the Dash app
     def run(self):
-        self.app.run_server(debug=True, port=os.environ.get('USER') or 8050)
+        self.app.run_server(debug=True, port=(os.environ.get('PORT') or 8050))
