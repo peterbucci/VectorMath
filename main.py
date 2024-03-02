@@ -4,7 +4,7 @@ import os
 
 vectors = [Vector(0, 0, 10, 10), Vector(0, 0, 20, 10)]
 visualizer = VectorVisualizer(vectors)
-server = visualizer.get_server()  # This is the Flask server object
+app = visualizer.app  # Get the Dash app instance
 
 if __name__ == "__main__":
-    server.run_server(debug=True, port=(os.environ.get('PORT') or 8050))
+    app.run_server(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))

@@ -3,7 +3,6 @@ from dash import dcc, html, Input, Output
 import plotly.graph_objs as go
 from vector import Vector
 from vector_operations import VectorOperations
-import os
 
 class VectorVisualizer:
     def __init__(self, vectors):
@@ -123,7 +122,3 @@ class VectorVisualizer:
                 ],
             )
         }
-    
-    # return the server
-    def get_server(self):
-        return self.app
