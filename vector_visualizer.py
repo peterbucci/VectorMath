@@ -3,6 +3,7 @@ from dash import dcc, html, Input, Output
 import plotly.graph_objs as go
 from vector import Vector
 from vector_operations import VectorOperations
+import os
 
 class VectorVisualizer:
     def __init__(self, vectors):
@@ -125,4 +126,4 @@ class VectorVisualizer:
 
     # The run method runs the Dash app
     def run(self):
-        self.app.run_server(debug=True, port=8050)
+        self.app.run_server(debug=True, port=os.environ.get('USER') or 8050)
