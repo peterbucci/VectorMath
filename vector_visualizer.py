@@ -123,6 +123,10 @@ class VectorVisualizer:
                 ],
             )
         }
+    
+    # The run method runs the server
+    def run(self):
+        self.app.run_server(debug=True, port=(os.environ.get('PORT') or 8050))
 
     # return the server
     def get_server(self):
