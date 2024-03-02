@@ -6,4 +6,4 @@ visualizer = VectorVisualizer(vectors)
 server = visualizer.get_server()  # This is the Flask server object
 
 if __name__ == "__main__":
-    visualizer.run()
+    server.run_server(debug=True, port=(8050))
