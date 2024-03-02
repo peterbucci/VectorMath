@@ -122,3 +122,7 @@ class VectorVisualizer:
                 ],
             )
         }
+    
+    # return the server
+    def get_server(self):
+        return self.app.server
